@@ -10,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Bullets")] 
     public Transform bulletSpawn;
-    public GameObject bulletPrefab;
+    //public GameObject bulletPrefab;
     public int frameDelay;
 
     private float startingPoint;
@@ -35,8 +35,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (Time.frameCount % frameDelay == 0)
         {
-           var temp_bullet = Instantiate(bulletPrefab);
-           temp_bullet.transform.position = bulletSpawn.position;
+        //   var temp_bullet = Instantiate(bulletPrefab);
+        //   temp_bullet.transform.position = bulletSpawn.position;
 
             bulletManager.GetBullet(bulletSpawn.position);
         }
