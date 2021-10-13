@@ -15,7 +15,7 @@ public class BulletManager : MonoBehaviour
     {
         bulletPool = new Queue<GameObject>(); // creates an empty Queue
 
-        //BuildBulletPool();
+        BuildBulletPool();
     }
 
     /// <summary>
@@ -45,11 +45,11 @@ public class BulletManager : MonoBehaviour
     /// <returns></returns>
     public GameObject GetBullet(Vector2 spawnPosition)
     {
-        if (bulletPool.Count < 1)
-        {
-            AddBullet();
-            bulletNumber++;
-        }
+        //if (bulletPool.Count < 1)
+        //{
+        //    AddBullet();
+        //    bulletNumber++;
+        //}
 
         var temp_bullet = bulletPool.Dequeue();
         temp_bullet.transform.position = spawnPosition;
